@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Nunito', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: #ea2c62;
+  border: 0;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-family: 'Nunito', sans-serif;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, .1);
+  transition: all .25s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover {
+
+  background-color: #d81b50;
+}
+
+/*navbar*/
+.navbar {
+  background-color: #ffffff;
+}
+
+.navabr__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.navbar .logo {
+  color: #333;
+  font-size: 1.6rem;
+}
+
+.navbar .shopping__cart {
+  color: #333;
+  font-size: 2.6rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar .shopping__cart-amount {
+  position: absolute;
+  content: '';
+  top: -10px;
+  right: -16px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #ea2c62;
+  color: #fff;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner {
+  height: 30rem;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+.products__container {
+  padding: 4rem 0;
+}
+
+.products__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+}
+
+@media screen and (max-width:775px) {
+  .products__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width:560px) {
+  .products__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .product__item-img {
+    margin-bottom: 1rem;
+  }
+}
+
+.product__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product__item button {
+  position: absolute;
+  right: -100%;
+  transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.product__item:hover button {
+  right: 5rem;
+}
+
+.product__item-img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+
+.product__item-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product__item-title {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  margin-right: 2rem;
+}
+
+.product__item-price {
+  font-size: 1.6rem;
+  color: #ea2c62;
+  font-weight: 800;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 35rem;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 99;
+  box-shadow: -2px 2px 4px rgba(0, 0, 0, .1);
+  padding: 2rem 1rem;
+  transform: translateX(105%);
+  transition: all .5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.sidebar-show {
+  transform: translateX(0%);
+}
+
+.sidebar button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 2.6rem;
+}
+
+.sidebar__wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar_item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.sidebar_item-content {
+  flex: 1;
+  display: flex;
+}
+
+.sidebar_item-content img {
+  width: 6rem;
+  margin-right: 1rem;
+}
+
+.sidebar_item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar_item-info h3 {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
+
+.sidebar_item-info span {
+  color: #d81b50;
+  font-size: 1.5rem;
+}
+
+.sidebar_item-info button {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.sidebar_item-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar_item-amount button {
+  font-size: 1.6rem;
+
+}
+
+.sidebar_item-amount span {
+  font-size: 1.6rem;
+  color: #ea2c62;
+}
+
+.sidebar_total {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.sidebar_total button {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  background-color: #ea2c62;
+}

@@ -1,0 +1,8 @@
+export const INCREASE="INCREASE" 
+export const OPEN_SIDEBAR="OPEN_SIDEBAR"
+export const CLOSE_SIDEBAR="CLOSE_SIDEBAR"
+export const ADD_TO_CART="ADD_TO_CART"
+export const REMOVE_CART_ITEM="REMOVE_CART_ITEM"
+export const GET_TOTALS="GET_TOTALS"
+export const CLEAR_CART="CLEAR_CART"
+export const DECREASE="DECREASE"
